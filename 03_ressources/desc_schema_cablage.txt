@@ -1,0 +1,8 @@
+- Eolienne relier à 2 batteries de 6V chacune
+- Capteur de présence relier à la carte électronique d'acquisition (ajouter la connectique)
+- Capteur de porte relier à la carte électronique d'acquisition (ajouter la connectique)
+- Soufflerie relier à l'interface de commande elle-même relier à la carte électronique d'acquisition
+- Girouette relier à la carte Raspberry PI (port COM, liaison RS232)
+- Base de données stocker en local sur le serveur
+- PC relier à la Raspberry par Ethernet
+- Page web disponible depuis le serveur et compatible pour téléphone
