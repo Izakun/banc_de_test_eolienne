@@ -1,0 +1,13 @@
+ 
+    $resultats= $bdd->query("SELECT DATE_FORMAT(date_time, '%d/%m/%Y à %Hh%imin'),eoliennes.nom, scenarios.nom, sequences.duree, releves.force_vent, releves.puissance, releves.consigne
+FROM releves
+JOIN `tests` 
+ON releves.ID_releves = tests.ID_releves
+JOIN `eoliennes`
+ON tests.ID_eolienne = eoliennes.ID_eolienne
+JOIN scenarios
+ON tests.ID_scenarios = scenarios.ID_scenarios
+JOIN sequences
+ON scenarios.ID_scenarios = sequences.ID_scenarios
+
+ORDER BY releves.date_time DESC");
