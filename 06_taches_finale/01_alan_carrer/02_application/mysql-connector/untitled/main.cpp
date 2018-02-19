@@ -1,4 +1,5 @@
 #include <QCoreApplication>
+#include <QtSql>
 #include <QtSql/QtSql>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>

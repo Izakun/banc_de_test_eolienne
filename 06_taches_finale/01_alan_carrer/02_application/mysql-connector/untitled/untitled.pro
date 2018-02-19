@@ -12,9 +12,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp
 
-win32: LIBS += -LC:\wamp\bin\mysql\mysql5.7.19\lib\ -libmysql
+win64: LIBS += -LC:\wamp64\bin\mysql\mysql5.7.14\lib\ -libmysql
+
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
-INCLUDEPATH += $$PWD -LC:\wamp\bin\mysql\mysql5.7.19\lib
-DEPENDPATH += $$PWD -LC:\wamp\bin\mysql\mysql5.7.19\lib
+INCLUDEPATH += $$PWD -LC:\wamp64\bin\mysql\mysql5.7.14\lib
+DEPENDPATH += $$PWD -LC:\wamp64\bin\mysql\mysql5.7.14\lib
