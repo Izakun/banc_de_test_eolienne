@@ -1,8 +1,9 @@
 #include <QCoreApplication>
-#include <QtSql>
 #include <QtSql/QtSql>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
+#include <QtSql/QSqlError>
+#include <QtCore>
 #include <iostream>
 
 using namespace std;
@@ -14,14 +15,16 @@ int main(int argc, char *argv[])
     // Creation de la connexion a la base de donnée
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");
+    db.setDatabaseName("test");
     db.setUserName("root");
     db.setPassword("");
-    db.setDatabaseName("test");
 
     if(db.open())
         cout << "connexion reussite" << endl;
     else
         cout << "connexion echoue" << endl;
+    qDebug() <<  db.isValid();
+    qDebug() <<  db.lastError();
 
     string id;
 
