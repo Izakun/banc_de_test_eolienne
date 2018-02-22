@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
     // Creation de la connexion a la base de donnée
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("localhost");
+    db.setHostName("127.0.0.1");
     db.setDatabaseName("test");
     db.setUserName("root");
     db.setPassword("");
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     qDebug() <<  db.isValid();
     qDebug() <<  db.lastError();
 
-    string id;
+    /*string id;
 
     QSqlQuery query(db);
     query.exec("SELECT * FROM test");
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         }
     }
     else
-        cout << "pas de données dans la base";
+        cout << "pas de données dans la base";*/
 
     return a.exec();
 }
