@@ -14,10 +14,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_SQL_LIB -DQT_CORE_LIB
 CFLAGS        = -fno-keep-inline-dllexport -pipe -g -Wextra -Wall -W $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -pipe -g -std=gnu++11 -Wextra -Wall -W -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\untitled -I. -I..\untitled -I-LC:\wamp\bin\mysql\mysql5.7.19\lib -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtSql -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtCore -Idebug -IC:\Qt\Qt5.9.0\5.9\mingw53_32\mkspecs\win32-g++ 
+INCPATH       = -I..\untitled -I. -I..\untitled -I-LC:\wamp64\bin\mysql\mysql5.7.14\lib -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtSql -IC:\Qt\Qt5.9.0\5.9\mingw53_32\include\QtCore -Idebug -IC:\Qt\Qt5.9.0\5.9\mingw53_32\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-subsystem,console -mthreads
-LIBS        =        -LC:\wamp\bin\mysql\mysql5.7.19\lib -libmysql -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sqld.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Cored.a 
+LIBS        =        -LC:\Qt\Qt5.9.0\5.9\mingw53_32\lib C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Sqld.a C:\Qt\Qt5.9.0\5.9\mingw53_32\lib\libQt5Cored.a 
 QMAKE         = C:\Qt\Qt5.9.0\5.9\mingw53_32\bin\qmake.exe
 IDC           = idc
 IDL           = midl
