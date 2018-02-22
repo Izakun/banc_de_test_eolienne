@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-02-01T14:10:23
+# Project created by QtCreator 2018-02-05T08:41:16
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = banc_test_eolienne
+TARGET = application
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,10 +25,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    cscenario.cpp \
+    connector.cpp \
+    cphase.cpp \
+    ceolienne.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    cscenario.h \
+    connector.h \
+    cphase.h \
+    ceolienne.h
 
 FORMS += \
         mainwindow.ui
