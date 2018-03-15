@@ -2,14 +2,12 @@
 #define CSCENARIO_H
 #include <iostream>
 
-using namespace std;
-
 class CScenario
 {
 private:
-    string nom;
+    std::string nom;
 public:
-    CScenario(string nom);
+    CScenario(std::string nom);
     BDD_supprimer(int id);
 };
 

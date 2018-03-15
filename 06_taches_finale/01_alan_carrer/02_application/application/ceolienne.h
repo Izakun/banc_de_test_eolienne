@@ -3,22 +3,23 @@
 #include <iostream>
 #include "connector.h"
 
-using namespace std;
-
-class ceolienne
+class ceolienne : public connector
 {
 private:
-    struct value
+    connector db;
+
+    /*struct value
     {
-        string model;
-        string type;
-        string fabricant;
-        string chemin_doc;
+        QString model;
+        QString type;
+        QString fabricant;
+        QString chemin_doc;
     };
-    std::vector<value> valeurs;
+    std::vector<value> valeurs;*/
+    connector::donnees valeurs;
 
 public:
-    ceolienne(string model, string type, string fabricant, string chemin_doc);
+    ceolienne(QString model, QString type, QString fabricant, QString chemin_doc);
 };
 
 #endif // CEOLIENNE_H

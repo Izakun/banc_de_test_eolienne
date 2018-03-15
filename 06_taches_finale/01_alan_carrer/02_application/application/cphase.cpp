@@ -1,6 +1,6 @@
 #include "cphase.h"
 
-cphase::cphase()
+cphase::cphase(int temps, int puissance)
 {
 
 }

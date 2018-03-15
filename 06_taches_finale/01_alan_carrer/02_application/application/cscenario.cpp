@@ -1,6 +1,6 @@
 #include "cscenario.h"
 
-CScenario::CScenario(string nom)
+CScenario::CScenario(std::string nom)
 {
     this->nom = nom;
 }
