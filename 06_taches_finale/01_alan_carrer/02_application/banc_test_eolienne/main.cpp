@@ -4,8 +4,6 @@
 #include <iostream>
 #include "mainwindow.h"
 #include "ceolienne.h"
-//#include "cscenario.h"
-//#include "cphase.h"
 
 int main(int argc, char *argv[])
 {
