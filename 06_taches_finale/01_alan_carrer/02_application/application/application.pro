@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql
+QT += gui core network sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -27,16 +27,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     cscenario.cpp \
-    connector.cpp \
     cphase.cpp \
-    ceolienne.cpp
+    ceolienne.cpp \
+    csocketclient.cpp
 
 HEADERS += \
         mainwindow.h \
     cscenario.h \
-    connector.h \
     cphase.h \
-    ceolienne.h
+    ceolienne.h \
+    csocketclient.h
 
 FORMS += \
         mainwindow.ui

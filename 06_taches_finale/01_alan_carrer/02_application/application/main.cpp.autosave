@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
     db.setDatabaseName("test");
     db.setUserName("root");
     db.setPassword("");
-    db.driver();
     if(db.isValid()) qDebug() << "valid";
     else qDebug() << "not valid";
 

@@ -1,16 +1,23 @@
 #ifndef CPHASE_H
 #define CPHASE_H
+#include <iostream>
+#include <QtSql/QSql>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlResult>
+#include <QtCore>
+#include <iostream>
 
-
-class cphase
+class Cphase
 {
 private:
     int temps;
     int puissance;
+    QSqlQuery query;
 public:
-    cphase(int temps, int puissance);
-    void BDD_ajouter();
-    void BDD_supprimer(int id);
+    Cphase(int temps, int puissance);
+    void insertDB(QSqlDatabase &db);
+    void removeDB(QSqlDatabase &db, int id);
 };
 
 #endif // CPHASE_H

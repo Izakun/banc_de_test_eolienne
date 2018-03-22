@@ -1,12 +1,23 @@
 #include "ceolienne.h"
 
-ceolienne::ceolienne(QString model, QString type, QString fabricant, QString chemin_doc)
+Ceolienne::Ceolienne(QString model, QString type, QString fabricant, QString chemin_doc)
 {
-    //valeurs.emplace_back(value{model, type, fabricant, chemin_doc});
-    valeurs.model = model;
-    valeurs.type = type;
-    valeurs.fabricant = fabricant;
-    valeurs.chemin_doc = chemin_doc;
-    db.insert(valeurs);
+    this->model = model;
+    this->type = type;
+    this->fabricant = fabricant;
+    this->chemin_doc = chemin_doc;
+}
+
+void Ceolienne::insertDB(QSqlDatabase &db)
+{
+    db.open();
+    if(!db.isOpen()) qDebug()<< db.lastError();
+    else qDebug() << "success";
+    query.prepare("INSERT INTO eolienne VALUES (?, ?, ?, ?)");
+    query.addBindValue(this->model);
+    query.addBindValue(this->type);
+    query.addBindValue(this->fabricant);
+    query.addBindValue(this->chemin_doc);
+    query.exec();
     db.close();
 }
