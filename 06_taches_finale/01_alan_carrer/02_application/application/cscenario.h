@@ -17,6 +17,7 @@ public:
     CScenario(QString nom);
     void insertDB(QSqlDatabase &db);
     void removeDB(QSqlDatabase &db, int id);
+    void selectDB(QSqlDatabase &db);
 };
 
 #endif // CSCENARIO_H
