@@ -13,14 +13,23 @@ SOURCES += \
     cscenario.cpp \
     cphase.cpp \
     ceolienne.cpp \
-    csocketclient.cpp
+    csocketclient.cpp \
+    execscenario.cpp \
+    createscenario.cpp \
+    addeolienne.cpp
 
 HEADERS += \
         mainwindow.h \
     cscenario.h \
     cphase.h \
     ceolienne.h \
-    csocketclient.h
+    csocketclient.h \
+    execscenario.h \
+    createscenario.h \
+    addeolienne.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    execscenario.ui \
+    createscenario.ui \
+    addeolienne.ui
