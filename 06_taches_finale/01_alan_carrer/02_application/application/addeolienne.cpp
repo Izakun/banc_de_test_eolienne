@@ -19,3 +19,9 @@ void addEolienne::on_pushButton_clicked()
     eolienne = new Ceolienne(ui->txt_model->text(), ui->txt_type->text(),ui->txt_fab->text(),ui->txt_doc->text());
     eolienne->insertDB(*db);
 }
+
+void addEolienne::on_toolButton_clicked()
+{
+    QString file_name = QFileDialog::getOpenFileName(this,"...", "C://");
+    ui->txt_doc->setText(file_name);
+}

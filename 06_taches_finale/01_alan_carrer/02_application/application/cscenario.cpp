@@ -5,33 +5,24 @@ CScenario::CScenario(QString nom)
     this->nom = nom;
 }
 
-void CScenario::insertDB(QSqlDatabase &db)
+bool CScenario::insertDB(QSqlDatabase &db)
 {
-    db.open();
-    query.prepare("INSERT INTO scenario (nom) VALUES (?)");
+    if (!db.isOpen()) return false;
+    query.prepare("INSERT INTO scenario VALUES (NULL, ?)");
     query.addBindValue(this->nom);
     query.exec();
-    db.close();
+    return true;
 }
 
 void CScenario::removeDB(QSqlDatabase &db, int id)
 {
-    db.open();
     query.prepare("DELETE FROM scenario WHERE id=?");
     query.addBindValue(id);
     query.exec();
-    db.close();
 }
 
 void CScenario::selectDB(QSqlDatabase &db)
 {
-    db.open();
     query.prepare("SELECT * FROM scenario");
     query.exec();
-    if(query.size()>0){
-        while (query.next()) {
-            query.value("name").toString().toUtf8().constData();
-        }
-    }
-    db.close();
 }

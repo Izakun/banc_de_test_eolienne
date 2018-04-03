@@ -2,6 +2,8 @@
 #define ADDEOLIENNE_H
 
 #include <QWidget>
+#include <QFileDialog>
+#include <QDebug>
 #include "ceolienne.h"
 
 namespace Ui {
@@ -20,7 +22,10 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_toolButton_clicked();
+
 private:
+    QString file_name;
     Ui::addEolienne *ui;
     Ceolienne *eolienne;
     QSqlDatabase *db;

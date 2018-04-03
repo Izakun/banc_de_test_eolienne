@@ -50,6 +50,10 @@
    </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>btn_exec</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

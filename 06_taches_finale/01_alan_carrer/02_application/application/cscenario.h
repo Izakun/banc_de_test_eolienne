@@ -15,7 +15,7 @@ private:
     QSqlQuery query;
 public:
     CScenario(QString nom);
-    void insertDB(QSqlDatabase &db);
+    bool insertDB(QSqlDatabase &db);
     void removeDB(QSqlDatabase &db, int id);
     void selectDB(QSqlDatabase &db);
 };

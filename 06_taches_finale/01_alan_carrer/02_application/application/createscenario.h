@@ -2,6 +2,7 @@
 #define CREATESCENARIO_H
 
 #include <QWidget>
+#include <QMessageBox>
 #include "cscenario.h"
 #include "cphase.h"
 
@@ -26,6 +27,10 @@ private:
     CScenario *scenario;
     Cphase *phase;
     QSqlDatabase *db;
+    QSqlQuery query;
+    int r;
+
+    void comboActu();
 };
 
 #endif // CREATESCENARIO_H

@@ -6,6 +6,7 @@
 #include "execscenario.h"
 #include "addeolienne.h"
 #include "createscenario.h"
+#include "csocketclient.h"
 
 namespace Ui {
 class MainWindow;
@@ -26,12 +27,15 @@ private slots:
 
     void on_btn_createScenario_clicked();
 
+    void on_horizontalSlider_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase *db;
     execScenario *exec;
     addEolienne *add;
     createScenario *create;
+    csocketClient *socket;
 };
 
 #endif // MAINWINDOW_H

@@ -9,9 +9,10 @@ MainWindow::MainWindow(QSqlDatabase *db, QWidget *parent) :
 
     this->db = db;
 
-    exec = new execScenario();
+    exec = new execScenario(db);
     add = new addEolienne(db);
     create = new createScenario(db);
+    socket = new csocketClient();
 }
 
 MainWindow::~MainWindow()
@@ -32,4 +33,10 @@ void MainWindow::on_btn_addEolienne_clicked()
 void MainWindow::on_btn_createScenario_clicked()
 {
     create->show();
+}
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    QString percent = value;
+    socket->send(percent, 1);
 }

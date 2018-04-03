@@ -20,9 +20,10 @@ int main(int argc, char *argv[])
     QSqlDatabase db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("127.0.0.1");
     db.setPort(3306);
-    db.setDatabaseName("test");
+    db.setDatabaseName("soufflerie");
     db.setUserName("root");
     db.setPassword("");
+    db.open();
 
     MainWindow w(&db);
     w.show();

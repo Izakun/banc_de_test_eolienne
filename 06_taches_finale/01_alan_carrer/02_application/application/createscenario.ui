@@ -107,16 +107,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QColumnView" name="tab_bdd">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>361</width>
-      <height>151</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
@@ -176,8 +166,31 @@
      <string>Ajouter</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="tab_db">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>361</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="columnCount">
+     <number>0</number>
+    </property>
+   </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>txt_scenario</tabstop>
+  <tabstop>btn_create</tabstop>
+  <tabstop>combo_scenario</tabstop>
+  <tabstop>txt_phase</tabstop>
+  <tabstop>nb_power</tabstop>
+  <tabstop>nb_time</tabstop>
+  <tabstop>btn_add</tabstop>
+  <tabstop>tab_db</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

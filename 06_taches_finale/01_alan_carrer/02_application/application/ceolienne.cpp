@@ -10,7 +10,6 @@ Ceolienne::Ceolienne(QString model, QString type, QString fabricant, QString che
 
 void Ceolienne::insertDB(QSqlDatabase &db)
 {
-    db.open();
     if(!db.isOpen()) qDebug()<< db.lastError();
     else qDebug() << "success";
     query.prepare("INSERT INTO eolienne VALUES (?, ?, ?, ?)");
@@ -19,5 +18,4 @@ void Ceolienne::insertDB(QSqlDatabase &db)
     query.addBindValue(this->fabricant);
     query.addBindValue(this->chemin_doc);
     query.exec();
-    db.close();
 }

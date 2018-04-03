@@ -4,14 +4,15 @@
 #include <QTcpSocket>
 #include <QDebug>
 
-class csocketClient
+class csocketClient: public QObject
 {
 private:
-    //QTcpSocket *socket;
+    QTcpSocket *socket;
 
 public:
-    //explicit csocketClient(QObject *parent = 0);
-    //void Connect();
+    explicit csocketClient(QObject *parent = 0);
+    bool connected();
+    void send(QString s, int type);
 };
 
 #endif // CSOCKETCLIENT_H

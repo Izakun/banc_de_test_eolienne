@@ -150,6 +150,12 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>horizontalSlider</tabstop>
+  <tabstop>btn_execScenario</tabstop>
+  <tabstop>btn_createScenario</tabstop>
+  <tabstop>btn_addEolienne</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

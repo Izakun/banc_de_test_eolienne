@@ -11,11 +11,13 @@
 class Cphase
 {
 private:
+    int scenario;
+    QString nom;
     int temps;
     int puissance;
     QSqlQuery query;
 public:
-    Cphase(int temps, int puissance);
+    Cphase(int scenario, /*QString nom,*/ int temps, int puissance);
     void insertDB(QSqlDatabase &db);
     void removeDB(QSqlDatabase &db, int id);
 };
