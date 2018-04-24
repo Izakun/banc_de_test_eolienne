@@ -1,24 +1,26 @@
 #ifndef CEOLIENNE_H
 #define CEOLIENNE_H
 #include <iostream>
-#include "connector.h"
+#include <QtSql/QSql>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlResult>
+#include <QSqlError>
+#include <QtCore>
+#include <iostream>
 
-using namespace std;
-
-class ceolienne
+class Ceolienne
 {
 private:
-    struct value
-    {
-        string model;
-        string type;
-        string fabricant;
-        string chemin_doc;
-    };
-    std::vector<value> valeurs;
-
+    QString model;
+    QString type;
+    QString fabricant;
+    QString chemin_doc;
+    QSqlQuery query;
 public:
-    ceolienne(string model, string type, string fabricant, string chemin_doc);
+    Ceolienne(QString model, QString type, QString fabricant, QString chemin_doc);
+
+    void insertDB(QSqlDatabase &db);
 };
 
 #endif // CEOLIENNE_H
