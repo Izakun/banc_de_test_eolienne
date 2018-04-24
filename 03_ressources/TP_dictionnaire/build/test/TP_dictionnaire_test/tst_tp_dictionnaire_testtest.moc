@@ -1,0 +1,110 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'tst_tp_dictionnaire_testtest.cpp'
+**
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include <QtCore/qbytearray.h>
+#include <QtCore/qmetatype.h>
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'tst_tp_dictionnaire_testtest.cpp' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.7.0. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+struct qt_meta_stringdata_TP_dictionnaire_testTest_t {
+    QByteArrayData data[3];
+    char stringdata0[36];
+};
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_TP_dictionnaire_testTest_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
+static const qt_meta_stringdata_TP_dictionnaire_testTest_t qt_meta_stringdata_TP_dictionnaire_testTest = {
+    {
+QT_MOC_LITERAL(0, 0, 24), // "TP_dictionnaire_testTest"
+QT_MOC_LITERAL(1, 25, 9), // "testCase1"
+QT_MOC_LITERAL(2, 35, 0) // ""
+
+    },
+    "TP_dictionnaire_testTest\0testCase1\0"
+};
+#undef QT_MOC_LITERAL
+
+static const uint qt_meta_data_TP_dictionnaire_testTest[] = {
+
+ // content:
+       7,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       1,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       0,       // signalCount
+
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   19,    2, 0x08 /* Private */,
+
+ // slots: parameters
+    QMetaType::Void,
+
+       0        // eod
+};
+
+void TP_dictionnaire_testTest::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        TP_dictionnaire_testTest *_t = static_cast<TP_dictionnaire_testTest *>(_o);
+        Q_UNUSED(_t)
+        switch (_id) {
+        case 0: _t->testCase1(); break;
+        default: ;
+        }
+    }
+    Q_UNUSED(_a);
+}
+
+const QMetaObject TP_dictionnaire_testTest::staticMetaObject = {
+    { &QObject::staticMetaObject, qt_meta_stringdata_TP_dictionnaire_testTest.data,
+      qt_meta_data_TP_dictionnaire_testTest,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+};
+
+
+const QMetaObject *TP_dictionnaire_testTest::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *TP_dictionnaire_testTest::qt_metacast(const char *_clname)
+{
+    if (!_clname) return Q_NULLPTR;
+    if (!strcmp(_clname, qt_meta_stringdata_TP_dictionnaire_testTest.stringdata0))
+        return static_cast<void*>(const_cast< TP_dictionnaire_testTest*>(this));
+    return QObject::qt_metacast(_clname);
+}
+
+int TP_dictionnaire_testTest::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 1)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 1;
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 1)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 1;
+    }
+    return _id;
+}
+QT_END_MOC_NAMESPACE
