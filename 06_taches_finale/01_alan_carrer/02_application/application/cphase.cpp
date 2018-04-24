@@ -1,6 +1,6 @@
 #include "cphase.h"
 
-Cphase::Cphase(int scenario, /*QString nom,*/ int temps, int puissance)
+Cphase::Cphase(int scenario, int temps, int puissance)
 {
     this->scenario = scenario;
     this->nom = nom;
@@ -8,13 +8,15 @@ Cphase::Cphase(int scenario, /*QString nom,*/ int temps, int puissance)
     this-> puissance = puissance;
 }
 
-void Cphase::insertDB(QSqlDatabase &db)
+bool Cphase::insertDB(QSqlDatabase &db)
 {
+    if(!db.isOpen()) return false;
     query.prepare("INSERT INTO phase (fk_scenario, temps, puissance) VALUES (?, ?, ?)");
     query.addBindValue(this->scenario);
     query.addBindValue(this->temps);
     query.addBindValue(this->puissance);
     query.exec();
+    return true;
 }
 
 void Cphase::removeDB(QSqlDatabase &db, int id)
