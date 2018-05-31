@@ -16,28 +16,31 @@ from statistics import mean
 from collections import deque
 import time
 from decimal import *
-
+from threading import RLock
 class CAcqPuissance:
     
     IN_CAN_COURANT = 2
     IN_CAN_TENSION = 1
+    
     
     def __init__(self):
         self.r = Raspiomix()
         self.listePuissances = deque(maxlen=60)
         
     def mesurerPuissance(self):
+        verrou = RLock()
         
-        # -------- Mesure tension ----------------------------------
-        # tension = ((self.r.readAdc(ENTREE_CAN))/(4.5/(4.5+47)))
-        # 1/(4.5/(4.5+47)) = 11,44444444444444444
-        tension = self.r.readAdc(__class__.IN_CAN_TENSION) * 11.44444444444444444
-        #print("tension = {:.1f} V".format(tension))
-        
-        # -------- Mesure courant ----------------------------------
-        # courant = ((self.r.readAdc(ENTREE_CAN))*5
-        courant = self.r.readAdc(__class__.IN_CAN_COURANT) * 5
-        #print("courant = {:.1f} A".format(courant))
+        with verrou:
+            # -------- Mesure tension ----------------------------------
+            # tension = ((self.r.readAdc(ENTREE_CAN))/(4.5/(4.5+47)))
+            # 1/(4.5/(4.5+47)) = 11,44444444444444444
+            tension = self.r.readAdc(__class__.IN_CAN_TENSION) * 11.44444444444444444
+            #print("tension = {:.1f} V".format(tension))
+            
+            # -------- Mesure courant ----------------------------------
+            # courant = ((self.r.readAdc(ENTREE_CAN))*5
+            courant = self.r.readAdc(__class__.IN_CAN_COURANT) * 5
+            #print("courant = {:.1f} A".format(courant))
         
         # -------- Mesure puissance instantanée ----------------------------------
         puissinst = courant * tension
@@ -64,7 +67,7 @@ if __name__ == "__main__":
     mesPuis = CAcqPuissance()
     print(mesPuis)
     mesPuis.mesurerPuissance()
-    print(mesPuis.listePuissances)
+    print(mesPuis.mesurerPuissance())
     mesPuis.moyennePuissance()
 
     

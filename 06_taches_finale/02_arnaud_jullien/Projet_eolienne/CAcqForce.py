@@ -33,12 +33,12 @@ class CAcqForce(Thread):
     def lectureForce(self) :
         trame = "$IIMWV,090.0,R,015.10,N,A*05"
         ftrame = trame.find("$IIMWV")
-        print (ftrame)
+##        print (ftrame)
         if trame.find("$IIMWV") == 0 :
-            print("ok")
+##            print("ok")
             trame2 = trame.split(",")
             forceVent = trame2[3]
-            print(forceVent)
+##            print(forceVent)
             return forceVent
         else :
             print("pas ok")
